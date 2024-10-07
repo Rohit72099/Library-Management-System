@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" 
+    integrity ="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" 
+    crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="container">
+        <!-- navigation bar  -->
+        <nav id="nav-bar" class="nav-bar">
+
+            <div class="nav-div logo" id="nav-olms-logo">
+                <i class='fas fa-book-reader logo'></i>
+                <h3>Online Library Management System</h3>
+            </div>
+            <div class="nav-div content">
+                <h3 class="nav-option active" id="dash">Dashboard</h3>
+                <h3 class="nav-option" id="issued"></h3><a href="IssuedBookServlet" class="issued nav-option">All_Issued</a></h3>
+                <h3 class="nav-option profile" id="profile">Profile</h3>
+            </div>
+        </nav>
+
+        <!-- dashboard  -->
+        <div class="dashboard" id="dashboard">
+
+            <div class="dashboard-item listed-book">
+               <i class="fas fa-book"></i>
+                <h2><a href="book.html">Book Available</a></h2>
+            </div>
+
+            <div class="dashboard-item issued-book">
+                <i class="fas fa-book-open"></i>
+                <h2><a href="RetrieveIssuedBooksServlet">Issued Books</a></h2>
+            </div>
+
+            <div class="dashboard-item return-book">
+                <i class="fas fa-recycle"></i>
+                <h2>Books Not Returned</h2>
+            </div>
+
+            <div class="dashboard-item fine">
+                <i class="fas fa-money-check"></i>
+                <h2>Fine</h2>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./js/welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Ubuntu' , sans-serif;
+}
+/* outer container */
+.container {
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+/* both the boxes --> left and right */
+.box {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.content {
+    background-color: rgb(109, 36, 0);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 65%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    transition: all 0.5s;
+}
+/* left container --> setting background */
+.left {
+    background: url('../public/images/library.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* right container --> setting the background */
+.right {
+    background: url('../public/images/dark-geometric\ \(1\).png');
+    height: 100%;
+    background-color: rgb(135, 72, 40);
+    box-shadow: inset 10px 10px 20px rgb(29, 16, 8);
+}
+
+/* styling the achor tag  */
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    border:white solid 0.2rem;
+    font-size: 1rem;
+    width: 60%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+    box-shadow: 5px 10px 15px rgb(45, 23, 12);
+    transition: box-shadow 0.4s ease;
+}
+
+/* change in styling of button when hover over it  */
+.btn:hover {
+    background-color: #fff;
+    color: rgb(135, 72, 40);
+    border : rgb(135, 72, 40) solid 0.4rem;
+    box-shadow: 10px 15px 20px rgb(45, 23, 12);
+}
+
+
+/* change in styling on left hover  */
+.left.box:hover {
+    background-color: rgb(95, 66, 45 ,0.5);
+}
+
+.left.box:hover .content {
+    width: 100%;
+    height: 100%;
+    top:0;
+    background-color: rgb(109, 36, 0 , 0.5);
+    font-size: 25px;
+}
+
+/* media query for other devices  */
+@media(max-width:800px){
+    .container {
+        display: flex;
+        width: 100vw;
+        text-align: center;
+        flex-direction: column;
+        flex: 1;
+    }
+    .box {
+        width: 100%;
+    }
+    .left .content {
+        height: 50%;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+

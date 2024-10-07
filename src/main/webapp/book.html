@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            /* background: linear-gradient(300deg, rgb(223, 140, 113), rgb(177, 57, 151),  rgb(243, 132, 6) ); */
+            background: linear-gradient(300deg, rgb(87, 47, 34), rgb(189, 122, 47),  rgb(97, 47, 31) );
+
+             background-size: 180% 180%;
+             animation: gradient-animation 5s ease infinite;
+             display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* margin: 3px; */
+            
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            background-color: rgb(117, 61, 16);
+            box-shadow: 2px 2px 8px 2px black;
+            position: fixed;
+            z-index: 3;
+            overflow: hidden;
+        }
+        .logo{
+            /* border: 1px solid red; */
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo h2{
+            animation: move5 3s linear 1s infinite alternate none;
+            position: relative;
+
+        }
+
+        @keyframes move5 {
+    from{
+        top: 0;
+        left:-25px;
+    }
+    to{
+        top: 0;
+        left: 25px;
+    }
+}
+        .option{
+            /* border: 1px solid green; */
+            width: 55%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
+        }
+        .op1{
+            width: 33%;
+            height: 30px;
+            /* border: 1px solid beige; */
+            display: flex;
+            justify-content: space-around;
+        }
+        .op1 h3{
+            cursor: pointer;
+            transition: all ease 0.3s;
+        }
+        .op1 h3:hover{
+            border-bottom: 4px solid rgb(94, 50, 14);
+        }
+        .search{
+            /* border: 1px solid blue; */
+            width: 15%;
+            display: flex;
+            align-items: center;
+
+        }
+        .search input{
+            height: 30px;
+            width: 170px;
+            background-color: rgb(201, 176, 157);
+            border-radius: 5px;
+        }
+        
+        #container{
+            /* border: 1px solid black; */
+            width: 95%;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            position: relative;
+            top: 60px;
+
+        }
+       
+        .card{
+            /* border: 1px solid red; */
+            width: 250px;
+            height: 300px;
+            margin: 9px;
+            background-color: rgb(184, 115, 92);
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px 2px black;
+            
+        }
+        .img{
+            /* border: 1px solid green; */
+            width: 95%;
+            height:65%;
+            margin: 8px;
+        }
+        .img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .content{
+            /* border: 1px solid rgb(224, 0, 176); */
+            height: 30%;
+            width: 100%;
+
+        }
+        .detail{
+            border: 1px solid rgb(8, 8, 24);
+            height: 60%;
+
+        }
+        .btn{
+            /* border: 1px solid orangered; */
+            height: 40%;
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+        }
+        .detail h4{
+            font-size:17px;
+        }
+        #issue{
+            height: 90%;
+            width: 90px;
+            background-color: rgb(156, 71, 31);
+            font-family:"Ubuntu",sans-serif;
+            color: aliceblue;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 1px 1px 5px 2px black;
+            cursor: pointer;
+
+        }
+         button:active{
+            transform: scale(0.95);
+        }
+       #issue:hover{
+            background-color: rgb(209, 171, 135);
+            color: black;
+        }
+
+
+/* for gradient effect  */
+@keyframes gradient-animation {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
+
+
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="nav">
+       <div class="logo">
+        <h2>Library &nbsp;&nbsp;Management &nbsp;&nbsp;System</h2>
+
+       </div>
+       <div class="option">
+        <div class="op1"><h3>Romance</h3></div>
+        <div class="op1"><h3>Science-Fiction</h3></div>
+        <div class="op1"><h3>Horror</h3></div>
+        <div class="op1"><h3>More!</h3></div>
+
+       </div>
+       <div class="search">
+        <input type="text" placeholder="search Your Books Here...">
+
+
+       </div>
+
+    </div>
+    <div id="container">
+
+    </div>
+    <script src="book.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library Management System</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Login to your account</h1>
+        <form action="LoginServlet" method="POST">
+
+            <div class="form-control">
+                <input type="text" id="username" name="username" required>
+                <label for="username">Username</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <p class="text">Don't have an account? Let's create one.<br/>
+                <a href="./SignUp.html" id="signUp" class="sign-up btn">Sign Up</a>
+            </p>
+
+        </form>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
